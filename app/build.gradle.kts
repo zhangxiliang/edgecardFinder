@@ -38,6 +38,10 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    // 添加这一段，告诉打包工具：看到 tflite 文件别压缩，直接存！
+    aaptOptions {
+        noCompress += "tflite"
+    }
 }
 
 dependencies {
